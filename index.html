@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="instructions">
+            Appuyer sur "demarrer le test" puis taper le message au dessus.
+            <br>
+            Appuyer sur "Finir le test" une fois que vous aurez fini.
+        </div>
+        <div class="stats">
+            <p>Temps : <span class="timer">0S</span></p>
+            <p>Erreur : <span class="mistakes">0</span></p>
+        </div>
+
+        <div id="quote" onmousedown="return false;" onselectstart="return false"></div>
+        <textarea id="quote_input" rows="3" placeholder="Tapez ici quand le test commencera."></textarea>
+        <button id="test_start" onclick="startTest()">Start Test</button>
+        <button id="test_stop" onclick="displayResult()">Stop Test</button>
+
+        <div class="result">
+            <h3>Resultat</h3>
+            <div class="wrapper">
+                <p>Précision : <span id="accuracy"> </span></p>
+                <p>Vitesse : <span id="wpm"> </span></p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
